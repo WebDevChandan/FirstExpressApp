@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const router = require("./userRoutes");
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
     
 //Using Body-Parser: It will return a body object
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -15,5 +15,5 @@ app.use(router);
 
 
 app.listen(PORT, () => {
-    console.log(`Server is running on Port: ${PORT}`);
+    console.log(`Server is running on Port: 4000`);
 })
